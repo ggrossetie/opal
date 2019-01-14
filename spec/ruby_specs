@@ -156,6 +156,7 @@ ruby/core/unboundmethod
 ruby/language
 !ruby/language/execution_spec
 !ruby/language/safe_spec
+!ruby/language/predefined_spec
 
 ruby/library/base64
 ruby/library/bigdecimal

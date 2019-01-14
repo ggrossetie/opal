@@ -29,22 +29,6 @@ class Opal::Nodes::CallNode
     end
   end
 
-  add_special :platform_is_not do |compile_default|
-    if arglist.children.include?(s(:sym, :opal))
-      push 'false'
-    else
-      push 'true'
-    end
-  end
-
-  add_special :platform_is do |compile_default|
-    if arglist.children.include?(s(:sym, :opal))
-      push 'true'
-    else
-      push 'false'
-    end
-  end
-
   add_special :requirable_spec_file do |compile_default|
     str = DependencyResolver.new(compiler, arglist.children[0]).resolve
     compiler.requires << str unless str.nil?

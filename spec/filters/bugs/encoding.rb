@@ -69,6 +69,7 @@ opal_filter "Encoding" do
   fails "Source files encoded in UTF-8 with a BOM can be parsed" # NoMethodError: undefined method `tmp' for #<MSpecEnv:0x7a11e>
   fails "Source files encoded in UTF-8 without a BOM can be parsed" # NoMethodError: undefined method `tmp' for #<MSpecEnv:0x7a11e>
   fails "String#* returns a String in the same encoding as self" # Expected #<Encoding:UTF-16LE> to be identical to #<Encoding:UTF-8>
+  fails "String#* raises an ArgumentError if the length of the resulting string doesn't fit into a long" # RangeError: multiply count must not overflow maximum string size
   fails "String#[]= with Fixnum index calls #to_int to convert the index" # Mock 'string element set' expected to receive 'to_int' exactly 1 times but received it 0 times
   fails "String#[]= with Fixnum index calls #to_int to convert the index" # NoMethodError: undefined method `[]=' for "あれ":String
   fails "String#[]= with Fixnum index encodes the String in an encoding compatible with the replacement" # NoMethodError: undefined method `pack' for [160]:Array
