@@ -20,5 +20,5 @@
 
 ::Object.require 'corelib/unsupported'
 
-::Object.require 'corelib/binding'
-::Object.require 'corelib/irb'
+#::Object.require 'corelib/binding'
+#::Object.require 'corelib/irb'
